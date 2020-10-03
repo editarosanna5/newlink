@@ -54,5 +54,9 @@ Useful commands:
            > db.feedbacks.find().pretty()
        - db.<collection name>.insert(<key value pairs>) -> to insert <key value pairs> to <collection name>
          example:
-           > db.locations.insert({ name: "Taman Anggrek", image: "images/tamananggrek.png", address: "Jl. Letjen S. Parman No.Kav. 21, RT.12/RW.1, Tomang, Kec. Grogol petamburan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11440", contact: "672828182", capacity: "40", visitorIn: "40", visitorOut: "50", description: "Mal Taman Anggrek adalah sebuah pusat perbelanjaan yang terletak di Tanjung Duren Selatan, Grogol Petamburan, Jakarta Barat, Indonesia. Mal ini dibuka pada tahun 1996. Di pusat perbelanjaan ini, terdapat sebuah rink ice skating. Mall ini didirikan oleh Salimin Prawiro Sumarto, konglomerat asal Kebumen." })
+           > db.locations.insert({ name: "Taman Anggrek", image: "images/locations/tamananggrek.png", address: "Jl. Letjen S. Parman No.Kav. 21, RT.12/RW.1, Tomang, Kec. Grogol petamburan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11440", contact: "672828182", capacity: "40", visitorIn: "40", visitorOut: "50", description: "Mal Taman Anggrek adalah sebuah pusat perbelanjaan yang terletak di Tanjung Duren Selatan, Grogol Petamburan, Jakarta Barat, Indonesia. Mal ini dibuka pada tahun 1996. Di pusat perbelanjaan ini, terdapat sebuah rink ice skating. Mall ini didirikan oleh Salimin Prawiro Sumarto, konglomerat asal Kebumen." })
+       - db.dropDatabase() -> to drop currently used database
+       - db.<collection name>.remove({}) -> to remove records of <collection name> from currently used database
+         example:
+           > db.locations.remove({})
        - exit -> to quit mongo shell
