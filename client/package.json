@@ -1,6 +1,6 @@
 {
-  "name": "confusion",
-  "version": "0.1.0",
+  "name": "newlink-app",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@react-navigation/bottom-tabs": "^5.8.0",
