@@ -47,9 +47,9 @@ app.use('/users', usersRouter);
 // app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'client/public')));
 
-app.use('/home', homeRouter);
+app.use('/home1', homeRouter);
 app.use('/how-to-use', howtouseRouter);
-app.use('/about', aboutRouter);
+app.use('/about1', aboutRouter);
 app.use('/comments', commentRouter);
 
 // catch 404 and forward to error handler
