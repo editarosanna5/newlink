@@ -4,11 +4,11 @@
 // export const baseUrl = 'http://localhost:5000/';
 // export const reactBaseUrl = 'http://localhost:3000/';
 
-// export const baseUrl = 'http://127.0.0.1:5000/';
-// export const reactBaseUrl = 'http://127.0.0.1:3000/';
+export const baseUrl = 'http://127.0.0.1:5000/';
+export const reactBaseUrl = 'http://127.0.0.1:3000/';
 
-export const baseUrl = 'http://172.31.56.178:5000/';
-export const reactBaseUrl = 'http://172.31.56.178:3000/';
+// export const baseUrl = 'http://172.31.56.178:5000/';
+// export const reactBaseUrl = 'http://172.31.56.178:3000/';
 
 // export const baseUrl = 'http://54.175.51.78:5000/';
 // export const reactBaseUrl = 'http://54.175.51.78:3000/';
