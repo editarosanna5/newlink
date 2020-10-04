@@ -58,7 +58,7 @@ class Main extends Component {
               <Route path="/home/:locationId" component={LocationWithId}/>
               <Route exact path="/about" component={() =><Contact resetFeedbackForm={this.props.resetFeedbackForm} postFeedback={this.props.postFeedback}/>}/>
               <Route exact path="/how-to-use" component={() => <HowToUse/>}/>
-              <Redirect to="/home"/>
+              {/* <Redirect to="/home"/> */}
             </Switch>
           </CSSTransition>
         </TransitionGroup>
