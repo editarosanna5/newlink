@@ -47,7 +47,7 @@ export const postComment = (locationId,rating,author,comment) => (dispatch) => {
 export const fetchLocations = () => (dispatch) => {
     dispatch(locationsLoading(true));
 
-    return fetch(baseUrl + 'home1')
+    return fetch(baseUrl + 'home')
         .then(response => {
             if (response.ok){
                 return response;
@@ -128,7 +128,7 @@ export const postFeedback = (firstname,lastname,telnum,email,agree,contactType,m
     }
     newFeedback.date = new Date().toISOString();
 
-    return fetch(baseUrl + 'about1', {
+    return fetch(baseUrl + 'about', {
         method:'POST',
         body: JSON.stringify(newFeedback),
         headers:{

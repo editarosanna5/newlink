@@ -7,7 +7,7 @@
 // export const baseUrl = 'http://127.0.0.1:5000/';
 // export const reactBaseUrl = 'http://127.0.0.1:3000/';
 
-export const baseUrl = 'http://54.175.51.78/';
+export const baseUrl = 'http://54.175.51.78/api/';
 export const reactBaseUrl = 'http://54.175.51.78/';
 
 // export const baseUrl = 'http://54.175.51.78:5000/';
