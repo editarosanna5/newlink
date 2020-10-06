@@ -9,7 +9,7 @@ function RenderMenuItem ({location}){
     return (
         <Card>
             <Link to={`/home/${location._id}`} >
-                <CardImg width="100%" src={baseUrl + location.image} alt={location.name} />
+                <CardImg width="100%" src={reactBaseUrl + location.image} alt={location.name} />
                 <CardImgOverlay>
                     <CardTitle style={{color:"white"}}>{location.name}</CardTitle>
                 </CardImgOverlay>
