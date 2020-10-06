@@ -18,7 +18,7 @@ class CommentForm extends Component {
     constructor(props){
         super(props);
         this.state = {
-            isModalOpen: false
+            isModalOpen: true
         };
         this.toggleModal = this.toggleModal.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -31,7 +31,7 @@ class CommentForm extends Component {
     }
 
     handleSubmit(values) {
-        // this.toggleModal();
+        this.toggleModal();
         this.props.postComment(this.props.locationId,values.rating,values.author,values.comment);
     }
 
