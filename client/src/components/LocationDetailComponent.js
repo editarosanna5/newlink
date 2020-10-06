@@ -18,7 +18,7 @@ class CommentForm extends Component {
     constructor(props){
         super(props);
         this.state = {
-            isModalOpen: true
+            isModalOpen: false
         };
         this.toggleModal = this.toggleModal.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,7 +26,7 @@ class CommentForm extends Component {
 
     toggleModal(){
         this.setState({
-            isModalOpen: !this.state.isModalOpen
+            isModalOpen: this.state.isModalOpen
         });
     }
 
