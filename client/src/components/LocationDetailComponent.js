@@ -26,13 +26,14 @@ class CommentForm extends Component {
 
     toggleModal(){
         this.setState({
-            isModalOpen: this.state.isModalOpen
+            isModalOpen: !this.state.isModalOpen
         });
     }
 
     handleSubmit(values) {
         this.toggleModal();
         this.props.postComment(this.props.locationId,values.rating,values.author,values.comment);
+        this.props.RenderComments(comments,postComment,locationId);
     }
 
     render(){
