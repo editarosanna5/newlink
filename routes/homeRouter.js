@@ -14,7 +14,7 @@ homeRouter.route('/')
 .options(cors.corsWithOptions, (req, res) => { res.sendStatus(200); })
 .get(cors.cors, (req,res,next) => {
     Locations.find(req.query)
-    .populate('comments.dishId')
+    .populate('comments.locationId')
     .then((locations) => {
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
@@ -46,10 +46,10 @@ homeRouter.route('/')
     .catch((err) => next(err));    
 });
 
-homeRouter.route('/:dishId')
+homeRouter.route('/:locationId')
 .options(cors.corsWithOptions, (req, res) => { res.sendStatus(200); })
 .get(cors.cors, (req,res,next) => {
-    Locations.findById(req.params.dishId)
+    Locations.findById(req.params.locationId)
     .then((location) => {
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
@@ -62,7 +62,7 @@ homeRouter.route('/:dishId')
     res.end('POST method not supported');
 })
 .put(cors.corsWithOptions, authenticate.verifyUser, (req, res, next) => {
-    Locations.findByIdAndUpdate(req.params.dishId, {
+    Locations.findByIdAndUpdate(req.params.locationId, {
         $set: req.body
     }, { new: true })
     .then((location) => {
@@ -73,7 +73,7 @@ homeRouter.route('/:dishId')
     .catch((err) => next(err));
 })
 .delete(cors.corsWithOptions, authenticate.verifyUser, (req, res, next) => {
-    Locations.findByIdAndRemove(req.params.dishId)
+    Locations.findByIdAndRemove(req.params.locationId)
     .then((resp) => {
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
