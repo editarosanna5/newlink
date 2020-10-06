@@ -3,6 +3,7 @@ import { Card, CardImg, CardImgOverlay, CardTitle, Input} from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
+import { reactBaseUrl } from '../shared/baseUrl';
 import Header from './HeaderComponent';
 
 function RenderMenuItem ({location}){
