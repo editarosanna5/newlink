@@ -25,7 +25,7 @@ export const postComment = (locationId,rating,author,comment) => (dispatch) => {
     })
         .then(response => {
             if (response.ok){
-                // return fetch(baseUrl + 'comments');
+                return response;
             } else {
                 var error =  new Error('Error '+response.status + ': ' + response.statusText);
                 error.response = response;
