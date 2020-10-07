@@ -2,6 +2,7 @@
   touch-action: none;
   touch-action: pan-up;
   touch-action: pan-down;
+  touch-action: pan-y;
 }
 
 body {
