@@ -89,7 +89,7 @@ class CommentForm extends Component {
                             </Row>
                             <Row className="form-group">
                                 <Col md={10}>
-                                    <Button type="submit" color="primary">Submit</Button>
+                                    <Button type="submit" color="primary" onClick={()=>window.location.reload(false)}>Submit</Button>
                                 </Col>
                             </Row>
                         </LocalForm>
