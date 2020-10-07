@@ -36,7 +36,6 @@ class CommentForm extends Component {
     }
 
     render(){
-        this.props.fetchComments();
         return(
             <div className="row" style={{paddingBottom:"150px"}}>
                 <Button outline onClick={this.toggleModal}>
