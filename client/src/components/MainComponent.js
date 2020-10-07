@@ -44,6 +44,7 @@ class Main extends Component {
         comments={this.props.comments.comments.filter((comment)=>comment.locationId === match.params.locationId)}
         commentsErrMess={this.props.comments.errMess}
         postComment={this.props.postComment}
+        fetchComments={this.props.fetchComments}
         />
       );
     }
