@@ -1,5 +1,7 @@
 * {
     touch-action: none;
+    touch-action: pan-up;
+    touch-action: pan-down;
 }
 
 .buttonSubmit {
