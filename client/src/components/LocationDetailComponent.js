@@ -33,10 +33,10 @@ class CommentForm extends Component {
     handleSubmit(values) {
         this.toggleModal();
         this.props.postComment(this.props.locationId,values.rating,values.author,values.comment);
-        this.props.props.fetchComments();
     }
 
     render(){
+        this.props.fetchComments();
         return(
             <div className="row" style={{paddingBottom:"150px"}}>
                 <Button outline onClick={this.toggleModal}>
