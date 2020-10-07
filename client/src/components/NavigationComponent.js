@@ -16,7 +16,7 @@ class Navigation extends Component {
     render(){
         return(
             <React.Fragment>
-                <Navbar dark className="navbar fixed-bottom">
+                <Navbar dark className="navbar fixed-bottom" style={{touchAction: 'none'}}>
                     <div className="container d-flex flex-row justify-content-around w-100">
                         <Nav navbar>
                             <NavItem className="textMenu">
