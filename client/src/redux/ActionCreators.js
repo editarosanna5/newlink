@@ -15,7 +15,7 @@ export const postComment = (locationId,rating,author,comment) => (dispatch) => {
     }
     newComment.date = new Date().toISOString();
 
-    return fetch(baseUrl + 'comments/' + locationId.comment._id, {
+    return fetch(baseUrl + 'comments', {
         method:'POST',
         body: JSON.stringify(newComment),
         headers:{
@@ -25,16 +25,7 @@ export const postComment = (locationId,rating,author,comment) => (dispatch) => {
     })
         .then(response => {
             if (response.ok){
-                return fetch(baseUrl + 'comments')
-                .then(response => {
-                    if (response.ok){
-                        return response;
-                    } else {
-                        var error = new Error('Error');
-                        error.response = response;
-                        throw error;
-                    }
-                });
+                return fetch(baseUrl + 'comments');
             } else {
                 var error =  new Error('Error '+response.status + ': ' + response.statusText);
                 error.response = response;
