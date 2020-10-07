@@ -1,3 +1,7 @@
+* {
+    touch-action: none;
+}
+
 .buttonSubmit {
     background-color: #00BCD5;
     color:aliceblue;
@@ -203,14 +207,3 @@ address{
         width: 30px;
     }
   }
-
-  
-  
-  
-
-
-
-
-
-
-
