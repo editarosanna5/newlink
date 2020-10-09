@@ -18,11 +18,11 @@ function HowToUse() {
                 <div className="col-12 col-md-6" >
                     <Media tag="li">
                         <Media left middle>
-                            <Media object src="assets/images/Logo.png" alt= "Langkah 1" id="howtouseComp"/>
+                            <Media object src="assets/images/egg.gif" alt= "Langkah 1" id="howtouseComp"/>
                         </Media>
                         <Media body className="ml-5 steps">
                             <Media heading id="mediaHeading">
-                                <img src={reactBaseUrl + "assets/images/egg.gif"} alt="one" id="imgNumber"/>
+                                <img src={reactBaseUrl + "assets/images/number-1.png"} alt="one" id="imgNumber"/>
                                 Langkah 1
                             </Media>
                             <p id="paraContent">Buka aplikasi NewLink. Tampilan beranda akan muncul pertama kali Anda mengakses aplikasi NewLink</p>
