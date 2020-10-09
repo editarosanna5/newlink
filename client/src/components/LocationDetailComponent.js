@@ -139,7 +139,7 @@ function RenderComments({comments,postComment, locationId}) {
     if (comments != null){
         return(
             <div>
-                <h4>Comments</h4>
+                <h4>Komentar</h4>
                 <ul className="list-unstyled">
                     <Stagger in>
                         {returnedComm}
@@ -208,6 +208,7 @@ const LocationDetail = (props) => {
                             <img src={reactBaseUrl + imgUrl} alt="percentage" id="imgPercentage"/>
                         </div>
                         <p style={{textAlign:"center"}} id="padatMal">Kepadatan Mal (%)</p>
+                        <h4>Promo Hari Ini</h4>
                         <CarouselComp />
                         <RenderComments comments = {props.comments}
                             postComment={props.postComment}
