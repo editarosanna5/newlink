@@ -145,7 +145,7 @@ function CarouselComp({promos}) {
     } else
         return(
             <div>
-                <img src={reactBaseUrl + 'images/assets/Logo.png'} alt="No promos"/>
+                <img src={reactBaseUrl + 'assets/images/Logo.png'} alt="No promos"/>
             </div>
         );
 }
