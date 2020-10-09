@@ -158,9 +158,9 @@ export const postFeedback = (firstname,lastname,telnum,email,agree,contactType,m
         
 }
 
-export const addPromos = (promo) => ({
+export const addPromos = (promos) => ({
     type: ActionTypes.ADD_PROMOS,
-    payload: promo
+    payload: promos
 });
 
 export const fetchPromos = () => (dispatch) => {

@@ -11,9 +11,9 @@ export const Promos = (state = {
         case ActionTypes.PROMOS_FAILED:
             return {...state, isLoading:false,errMess:action.payload,promos:[]};
 
-        case ActionTypes.ADD_PROMOS:
-            var promo = action.payload;
-            return {...state, promos: state.promos.concat(promo)};
+        // case ActionTypes.ADD_PROMOS:
+        //     var promo = action.payload;
+        //     return {...state, promos: state.promos.concat(promo)};
         default:
             return state;
     }
