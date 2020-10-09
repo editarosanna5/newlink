@@ -6,6 +6,7 @@ var logger = require('morgan');
 var session = require('express-session');
 var FileStore = require('session-file-store')(session);
 var passport = require('passport');
+const WebSocket = require('ws');
 var authenticate = require('./authenticate');
 
 var indexRouter = require('./routes/index');
@@ -20,6 +21,8 @@ const mongoose = require('mongoose');
 
 const Locations = require('./models/locations');
 
+const wss = new WebSocket.Server({ port: 8080 }, () => console.log(`WS Server is listening at 8080`));
+
 const url = config.mongoUrl;
 const connect = mongoose.connect(url, {
   useMongoClient: true
@@ -30,6 +33,32 @@ connect.then((db) => {
 }, (err) => { console.log(err); });
 
 var app = express();
+
+// seolah-olah database jumlah orang di masing-masing mall
+var counter = {
+  'Mall 1':0,
+  'Mall 2':0,
+  'Mall N':0
+};
+
+wss.on('connection', function connection(ws) {
+  // tutup connection, harusnya waktu hardware mati doang
+   ws.on('close',()=>{
+     console.log('disconnected')
+   })
+  
+   // waktu hardware kirim message, di proses di variabel message
+   ws.on('message', function incoming(message) {
+     console.log('client: %s', message);
+     // Process Data
+     // Terserah mau di export atau oper ke variabel apapun wkwk 
+     const obj = JSON.parse(message);
+     counter[`Mall ${obj.id}`] -= obj.remove_count ? obj.remove_count : 0
+     counter[`Mall ${obj.id}`] += obj.add_count ? obj.add_count : 0
+     console.log(counter)
+     // Send back message, if necessary
+   });
+ });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
