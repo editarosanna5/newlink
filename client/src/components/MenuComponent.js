@@ -10,7 +10,7 @@ function RenderMenuItem ({location}){
     return (
         <Card>
             <Link to={`/home/${location._id}`} >
-                <CardImg width="100%" src={baseUrl + 'images/locations/' + location.image + '.PNG'} alt={location.name} />
+                <CardImg width="100%" src={baseUrl + 'images/locations/' + location.image } alt={location.name} />
                 <CardImgOverlay>
                     <CardTitle style={{color:"white"}}>{location.name}</CardTitle>
                 </CardImgOverlay>
