@@ -6,7 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 export default function CarouselComp() {
     return (
         <div class="carousel-wrapper">
-            <Carousel infiniteLoop useKeyboardArrows autoPlay interval="6000" showStatus="false" showThumbs="false">
+            <Carousel infiniteLoop useKeyboardArrows autoPlay interval="6000" showStatus showThumbs>
                 <div>
                     <img src={reactBaseUrl + "assets/images/number-1.png"} />
                 </div>
