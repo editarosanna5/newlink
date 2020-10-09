@@ -137,14 +137,20 @@ function CarouselComp({promos}) {
     if (promos != null){
         return(
             <div class="carousel-wrapper">
-                <Carousel infiniteLoop useKeyboardArrows autoPlay interval="6000" showStatus="0" showThumbs="0">
+                <Carousel infiniteLoop useKeyboardArrows autoPlay interval="6000" showStatus="!showStatus" showThumbs="!showThumbs" centerMode>
                     {returnedPromos}
                 </Carousel>
             </div>
         );
     } else
         return(
-            <div></div>
+            <div>
+                <Carousel>
+                    <div>
+                        <img src={reactBaseUrl + 'images/assets/Logo.png'} alt="No promos"/>
+                    </div>
+                </Carousel>
+            </div>
         );
 }
 
@@ -201,7 +207,6 @@ const LocationDetail = (props) => {
         const percentage = props.location.capacity;
         let imgUrl="";
         let colorPath="";
-        let sizeText="";
         if(percentage<=40){
             imgUrl="assets/images/safe.png";
             colorPath="#00e640";
@@ -233,7 +238,7 @@ const LocationDetail = (props) => {
                             <img src={reactBaseUrl + imgUrl} alt="percentage" id="imgPercentage"/>
                         </div>
                         <p style={{textAlign:"center"}} id="padatMal">Kepadatan Mal (%)</p>
-                        <h4>Promo Hari Ini</h4>
+                        <h4 id="promo">Promo Hari Ini</h4>
                         <CarouselComp promos = {props.promos} />
                         <RenderComments comments = {props.comments}
                             postComment={props.postComment}
