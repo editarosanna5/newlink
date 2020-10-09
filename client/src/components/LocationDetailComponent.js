@@ -8,8 +8,9 @@ import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 import Header from './HeaderComponent';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import StarRatingComponent from 'react-star-rating-component';
-import CarouselComp from "./CarouselComponent";
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !(val) || (val.length<=len);
@@ -123,6 +124,25 @@ function RenderLocation({location}) {
     }
 }
 
+function CarouselComp({promos}) {
+    
+    let returnedPromos = promos.map(promo => {
+        return (
+            <div>
+                <img src={baseUrl + 'images/promos/' + promo.image + '.PNG'} alt={promo.name}/>
+            </div>
+        );
+    }) 
+    
+    return (
+        <div class="carousel-wrapper">
+            <Carousel infiniteLoop useKeyboardArrows autoPlay interval="6000" showStatus showThumbs>
+                {returnedPromos}
+            </Carousel>
+        </div>
+    );
+}
+
 function RenderComments({comments,postComment, locationId}) {
     
     let returnedComm = comments.map(comment => {
@@ -209,7 +229,7 @@ const LocationDetail = (props) => {
                         </div>
                         <p style={{textAlign:"center"}} id="padatMal">Kepadatan Mal (%)</p>
                         <h4>Promo Hari Ini</h4>
-                        <CarouselComp />
+                        <CarouselComp promos = {props.promo} />
                         <RenderComments comments = {props.comments}
                             postComment={props.postComment}
                             locationId={props.location._id}/> 
