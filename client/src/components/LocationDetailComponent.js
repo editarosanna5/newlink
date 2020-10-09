@@ -39,13 +39,13 @@ class CommentForm extends Component {
         return(
             <div className="row" style={{paddingBottom:"150px"}}>
                 <Button outline onClick={this.toggleModal}>
-                    <span className="fa fa-edit fa-lg"></span>Submit Comment
+                    <span className="fa fa-edit fa-lg"></span>Kirim Komentar
                 </Button>          
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-                    <ModalHeader toggle={this.toggleModal}>Submit Comment</ModalHeader>
+                    <ModalHeader toggle={this.toggleModal}>Kirim Komentar</ModalHeader>
                     <ModalBody>
                         <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
-                            <Label htmlFor=".rating">Rating</Label>
+                            <Label htmlFor=".rating">Penilaia</Label>
                             <Row className="form-group">    
                                 <Col md={12}>
                                     <Control.select model=".rating" name="rating"
@@ -59,7 +59,7 @@ class CommentForm extends Component {
                                     </Control.select>
                                 </Col>
                             </Row>
-                            <Label htmlFor="author">Your Name</Label>
+                            <Label htmlFor="author">Nama</Label>
                             <Row className="form-group">
                                 <Col md={12}>
                                     <Control.text model=".author" id="author" name="author"
@@ -78,7 +78,7 @@ class CommentForm extends Component {
                                         }}/>
                                 </Col>
                             </Row>
-                            <Label htmlFor="comment">Comment</Label>
+                            <Label htmlFor="comment">Komentar</Label>
                             <Row className="form-group">
                                 <Col md={12}>
                                     <Control.textarea model=".comment" name="comment" rows="6"
@@ -88,7 +88,7 @@ class CommentForm extends Component {
                             </Row>
                             <Row className="form-group">
                                 <Col md={10}>
-                                    <Button type="submit" color="primary">Submit</Button>
+                                    <Button type="submit" color="primary">Kirim</Button>
                                 </Col>
                             </Row>
                         </LocalForm>
