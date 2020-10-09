@@ -155,5 +155,31 @@ export const postFeedback = (firstname,lastname,telnum,email,agree,contactType,m
         .catch(error => { console.log('Post feedback ',error.message);
         alert('Your Feedback could not be posted\nError: '+error.message);
     });
-        
+      
+    export const fetchPromos = () => (dispatch) => {
+
+        return fetch(baseUrl + 'promos')
+            .then(response => {
+                if (response.ok){
+                    return response;
+                } else {
+                    var error =  new Error('Error '+response.status + ': ' + response.statusText);
+                    error.response = response;
+                    throw error;
+                }
+            },
+            error => {
+                var errmess = new Error(error.message);
+                throw errmess;
+            })    
+            .then(response => response.json())
+            .then(promos => dispatch(addPromos(promos)))
+            .catch(error => dispatch(promosFailed(error.message)));
+    }
+    
+    export const promosFailed = (errmess) => ({
+        type: ActionTypes.PROMOS_FAILED,
+        payload: errmess
+    });
+    
 }

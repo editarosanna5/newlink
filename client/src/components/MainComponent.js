@@ -42,6 +42,7 @@ class Main extends Component {
         isLoading={this.props.locations.isLoading}
         errMess={this.props.locations.errMess}
         comments={this.props.comments.comments.filter((comment)=>comment.locationId === match.params.locationId)}
+        promo={this.props.promos.promos.filter((promo)=>promo.locationId === match.params.locationId)}
         commentsErrMess={this.props.comments.errMess}
         postComment={this.props.postComment}
         />
