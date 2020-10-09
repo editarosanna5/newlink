@@ -134,13 +134,18 @@ function CarouselComp({promos}) {
         );
     }) 
     
-    return (
-        <div class="carousel-wrapper">
-            <Carousel infiniteLoop useKeyboardArrows autoPlay interval="6000" showStatus="0" showThumbs="0">
-                {returnedPromos}
-            </Carousel>
-        </div>
-    );
+    if (comments != null){
+        return(
+            <div class="carousel-wrapper">
+                <Carousel infiniteLoop useKeyboardArrows autoPlay interval="6000" showStatus="0" showThumbs="0">
+                    {returnedPromos}
+                </Carousel>
+            </div>
+        );
+    } else
+        return(
+            <div></div>
+        );
 }
 
 function RenderComments({comments,postComment, locationId}) {
