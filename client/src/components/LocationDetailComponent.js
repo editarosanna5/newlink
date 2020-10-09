@@ -136,7 +136,7 @@ function CarouselComp({promos}) {
     
     return (
         <div class="carousel-wrapper">
-            <Carousel infiniteLoop useKeyboardArrows autoPlay interval="6000" showStatus showThumbs>
+            <Carousel infiniteLoop useKeyboardArrows autoPlay interval="6000" showStatus="0" showThumbs="0">
                 {returnedPromos}
             </Carousel>
         </div>
