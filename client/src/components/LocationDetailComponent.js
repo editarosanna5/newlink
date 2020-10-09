@@ -137,14 +137,14 @@ function CarouselComp({promos}) {
     if (promos != null){
         return(
             <div class="carousel-wrapper">
-                <Carousel infiniteLoop useKeyboardArrows autoPlay interval="6000" showStatus="!showStatus" showThumbs="!showThumbs" centerMode>
+                <Carousel infiniteLoop useKeyboardArrows autoPlay interval="6000" showStatus="!showStatus" showThumbs="!showThumbs">
                     {returnedPromos}
                 </Carousel>
             </div>
         );
     } else
         return(
-            <div>
+            <div class="carousel-wrapper">
                 <Carousel>
                     <div>
                         <img src={reactBaseUrl + 'images/assets/Logo.png'} alt="No promos"/>
