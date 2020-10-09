@@ -229,7 +229,7 @@ const LocationDetail = (props) => {
                         </div>
                         <p style={{textAlign:"center"}} id="padatMal">Kepadatan Mal (%)</p>
                         <h4>Promo Hari Ini</h4>
-                        <CarouselComp promos = {props.promo} />
+                        <CarouselComp promos = {props.promos} />
                         <RenderComments comments = {props.comments}
                             postComment={props.postComment}
                             locationId={props.location._id}/> 
