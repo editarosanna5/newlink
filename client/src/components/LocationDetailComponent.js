@@ -9,7 +9,7 @@ import Header from './HeaderComponent';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import StarRatingComponent from 'react-star-rating-component';
-import Carousel from "./CarouselComponent";
+import CarouselComp from "./CarouselComponent";
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !(val) || (val.length<=len);
@@ -208,7 +208,7 @@ const LocationDetail = (props) => {
                             <img src={reactBaseUrl + imgUrl} alt="percentage" id="imgPercentage"/>
                         </div>
                         <p style={{textAlign:"center"}} id="padatMal">Kepadatan Mal (%)</p>
-                        <Carousel />
+                        <CarouselComp />
                         <RenderComments comments = {props.comments}
                             postComment={props.postComment}
                             locationId={props.location._id}/> 
