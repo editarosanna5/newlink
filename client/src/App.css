@@ -114,7 +114,7 @@ address{
     }
     #paraContent {
         width: 400%;
-        font: 30pt;
+        font-size: 30pt;
     }
     .ml-5 {
         padding-top: 40%;
