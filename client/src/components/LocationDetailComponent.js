@@ -129,7 +129,7 @@ function CarouselComp({promos}) {
     let returnedPromos = promos.map(promo => {
         return (
             <div>
-                <img src={baseUrl + 'images/promos/' + promo.image + '.PNG'} alt={promo.name}/>
+                <img src={baseUrl + 'images/promos/' + promo.image } alt={promo.name}/>
             </div>
         );
     }) 
