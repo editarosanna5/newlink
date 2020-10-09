@@ -6,14 +6,15 @@ import LocationDetail from './LocationDetailComponent';
 import Navigation from './NavigationComponent';
 import { Switch, Route, Redirect , withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { postComment, fetchLocations,fetchComments,postFeedback } from '../redux/ActionCreators';
+import { postComment, fetchLocations,fetchComments,postFeedback,fetchPromos } from '../redux/ActionCreators';
 import { actions } from 'react-redux-form';
 import { TransitionGroup,CSSTransition} from 'react-transition-group';
 
 const mapStateToProps = state => {
   return {
     locations: state.locations,
-    comments: state.comments
+    comments: state.comments,
+    promos: state.promos
   }   
 }
 
@@ -22,7 +23,8 @@ const mapDispatchToProps = (dispatch) => ({
   fetchLocations: () => {dispatch(fetchLocations())},
   postFeedback: (firstname,lastname,telnum,email,agree,contactType,message) => dispatch(postFeedback(firstname,lastname,telnum,email,agree,contactType,message)),
   resetFeedbackForm: () => { dispatch(actions.reset('feedback'))},
-  fetchComments: () => {dispatch(fetchComments())}
+  fetchComments: () => {dispatch(fetchComments())},
+  fetchPromos: () => {dispatch(fetchPromos())}
 });
 
 class Main extends Component {
@@ -30,6 +32,7 @@ class Main extends Component {
   componentDidMount(){
     this.props.fetchLocations();
     this.props.fetchComments();
+    this.props.fetchPromos();
   }
 
  
