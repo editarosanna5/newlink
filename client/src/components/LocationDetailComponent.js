@@ -45,7 +45,7 @@ class CommentForm extends Component {
                     <ModalHeader toggle={this.toggleModal}>Kirim Komentar</ModalHeader>
                     <ModalBody>
                         <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
-                            <Label htmlFor=".rating">Penilaia</Label>
+                            <Label htmlFor=".rating">Penilaian</Label>
                             <Row className="form-group">    
                                 <Col md={12}>
                                     <Control.select model=".rating" name="rating"
