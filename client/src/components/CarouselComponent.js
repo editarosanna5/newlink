@@ -1,4 +1,5 @@
 import { Carousel } from 'react-responsive-carousel';
+import { reactBaseUrl } from '../shared/baseUrl';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function CarouselComp() {
