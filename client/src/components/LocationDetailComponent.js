@@ -172,7 +172,7 @@ const LocationDetail = (props) => {
         );
     } else
     if(props.location!=null){
-        const percentage = props.location.capacity;
+        const percentage = Math.round((props.location.visitorIn - props.location.visitorOut) * 100 / props.location.capacity);
         let imgUrl="";
         let colorPath="";
         let sizeText="";
