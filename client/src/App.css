@@ -106,15 +106,15 @@ address{
 /********** desktop only **********/
 @media (min-width: 992px) {
     #howtouseComp {
-        width: 350px;
+        width: 300px;
     }
     #mediaHeading {
         width: 750%;
         font-size: 26pt;
     }
     #paraContent {
-        width: 300%;
-        font: 24px;
+        width: 400%;
+        font: 30px;
     }
     .ml-5 {
         padding-top: 40%;
@@ -139,15 +139,15 @@ address{
   
   /********** tablet only **********/
   @media (min-width: 768px) and (max-width: 991px) {
-    /* #howtouseComp { */
-        /* width: 350px; */
-    /* } */
+    #howtouseComp {
+        width: 200px;
+    }
     #mediaHeading {
         width: 500%;
         font-size: 22pt;
     }
     #paraContent {
-        width: 200%;
+        width: 300%;
         font-size: 18pt;
     }
     .ml-5 {
