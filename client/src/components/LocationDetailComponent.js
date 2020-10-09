@@ -8,8 +8,9 @@ import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 import Header from './HeaderComponent';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import StarRatingComponent from 'react-star-rating-component';
-import CarouselComp from "./CarouselComponent";
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !(val) || (val.length<=len);
@@ -108,7 +109,7 @@ function RenderLocation({location}) {
                     exitTransform: 'scale(0.5) translateY(-50%)'
                 }}>
                 <Card id="description">
-                    <CardImg top src={baseUrl + 'images/locations/' + location.image + '.PNG'} alt={location.name} />
+                    <CardImg top src={baseUrl + 'images/locations/' + location.image } alt={location.name} />
                     <CardBody>
                         <CardTitle>{location.name}</CardTitle>
                         <CardText>{location.description}</CardText>
@@ -121,6 +122,25 @@ function RenderLocation({location}) {
             <div></div>
         );
     }
+}
+
+function CarouselComp({promos}) {
+    
+    let returnedPromos = promos.map(promo => {
+        return (
+            <div>
+                <img src={baseUrl + 'images/promos/' + promo.image } alt={promo.name}/>
+            </div>
+        );
+    }) 
+    
+    return (
+        <div class="carousel-wrapper">
+            <Carousel infiniteLoop useKeyboardArrows autoPlay interval="6000" showStatus="0" showThumbs="0">
+                {returnedPromos}
+            </Carousel>
+        </div>
+    );
 }
 
 function RenderComments({comments,postComment, locationId}) {
@@ -209,7 +229,7 @@ const LocationDetail = (props) => {
                         </div>
                         <p style={{textAlign:"center"}} id="padatMal">Kepadatan Mal (%)</p>
                         <h4>Promo Hari Ini</h4>
-                        <CarouselComp />
+                        <CarouselComp promos = {props.promo} />
                         <RenderComments comments = {props.comments}
                             postComment={props.postComment}
                             locationId={props.location._id}/> 
