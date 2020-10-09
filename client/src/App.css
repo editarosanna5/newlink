@@ -113,7 +113,7 @@ address{
         font-size: 26pt;
     }
     #paraContent {
-        width: 75%;
+        width: 300%;
         font: 24px;
     }
     .ml-5 {
@@ -147,8 +147,8 @@ address{
         font-size: 22pt;
     }
     #paraContent {
-        width: 50%;
-        font-size: 20pt;
+        width: 200%;
+        font-size: 18pt;
     }
     .ml-5 {
         padding-top: 30%;
