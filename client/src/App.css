@@ -99,8 +99,12 @@ address{
 }
 
 #mediaHeading {
-    color:#fe5722;
-    
+    color:#fe5722; 
+}
+
+#promo {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 /********** desktop only **********/
