@@ -114,7 +114,7 @@ address{
     }
     #paraContent {
         width: 400%;
-        font: 30px;
+        font: 30pt;
     }
     .ml-5 {
         padding-top: 40%;
@@ -133,7 +133,7 @@ address{
     }
     #imgNumber {
         margin-top:-5px;
-        width: 100px;
+        width: 80px;
     }
 }
   
