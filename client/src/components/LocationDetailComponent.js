@@ -134,7 +134,7 @@ function CarouselComp({promos}) {
         );
     }) 
     
-    if (comments != null){
+    if (promos != null){
         return(
             <div class="carousel-wrapper">
                 <Carousel infiniteLoop useKeyboardArrows autoPlay interval="6000" showStatus="0" showThumbs="0">
