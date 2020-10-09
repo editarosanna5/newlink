@@ -18,7 +18,7 @@ function HowToUse() {
                 <div className="col-12 col-md-6" >
                     <Media tag="li">
                         <Media left middle>
-                            <Media object src="assets/images/egg.gif" alt= "Langkah 1" id="howtouseComp"/>
+                            <Media object src="assets/images/langkah1.gif" alt= "Langkah 1" id="howtouseComp"/>
                         </Media>
                         <Media body className="ml-5 steps">
                             <Media heading id="mediaHeading">
@@ -30,7 +30,7 @@ function HowToUse() {
                     </Media>    
                     <Media tag="li">
                         <Media left middle>
-                            <Media object src="assets/images/Logo.png" alt="Langkah 2" id="howtouseComp"/>
+                            <Media object src="assets/images/langkah2.gif" alt="Langkah 2" id="howtouseComp"/>
                         </Media>
                         <Media body className="ml-5">
                             <Media heading id="mediaHeading">
@@ -42,7 +42,7 @@ function HowToUse() {
                     </Media>
                     <Media tag="li">
                         <Media left middle>
-                            <Media object src="assets/images/Logo.png" alt="Langkah 3" id="howtouseComp"/>
+                            <Media object src="assets/images/langkah3.gif" alt="Langkah 3" id="howtouseComp"/>
                         </Media>
                         <Media body className="ml-5 steps">
                             <Media heading id="mediaHeading">
