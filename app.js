@@ -15,6 +15,7 @@ var homeRouter = require('./routes/homeRouter');
 var aboutRouter = require('./routes/aboutRouter');
 var howtouseRouter = require('./routes/howtouseRouter');
 var commentRouter = require('./routes/commentRouter');
+var promoRouter = require('./routes/promoRouter');
 var config = require('./config');
 
 const mongoose = require('mongoose');
@@ -80,6 +81,7 @@ app.use('/home', homeRouter);
 app.use('/how-to-use', howtouseRouter);
 app.use('/about', aboutRouter);
 app.use('/comments', commentRouter);
+app.use('/promos', promoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
