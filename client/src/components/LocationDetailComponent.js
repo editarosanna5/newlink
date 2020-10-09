@@ -109,7 +109,7 @@ function RenderLocation({location}) {
                     exitTransform: 'scale(0.5) translateY(-50%)'
                 }}>
                 <Card id="description">
-                    <CardImg top src={baseUrl + 'images/locations/' + location.image + '.PNG'} alt={location.name} />
+                    <CardImg top src={baseUrl + 'images/locations/' + location.image } alt={location.name} />
                     <CardBody>
                         <CardTitle>{location.name}</CardTitle>
                         <CardText>{location.description}</CardText>
