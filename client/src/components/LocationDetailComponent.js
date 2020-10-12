@@ -209,7 +209,7 @@ const LocationDetail = (props) => {
         } else if (percentage>40 && percentage<=75) {
             imgUrl="assets/images/moderate.png";
             colorPath="#ffcb05";
-        } else if (percentage>75 && percentage <=100) {
+        } else if (percentage>75) {
             imgUrl="assets/images/crowded.png";
             colorPath="#dd2c00";
         }
